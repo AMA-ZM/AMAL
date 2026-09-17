@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amal Zawam - Entwicklerin</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#f6f6f8;color:#222}
+header{padding:60px 20px;text-align:center;background:#111;color:white}
+header h1{margin:0;font-size:42px}
+.btn{padding:10px 16px;border:1px solid #111;border-radius:20px;margin:5px;cursor:pointer;background:white}
+.btn.active{background:#111;color:white}
+section{max-width:800px;margin:40px auto;padding:0 20px}
+.card{background:white;padding:20px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,0.05);margin-bottom:20px}
+h2{border-left:4px solid #111;padding-left:10px}
+</style>
+</head>
+<body>
+<header>
+<h1 id="name">Amal Zawam</h1>
+<p id="title">Frontend Entwicklerin | Master KI</p>
+<div>
+<button class="btn active" onclick="setLang('de')">DE</button>
+<button class="btn" onclick="setLang('en')">EN</button>
+<button class="btn" onclick="setLang('fr')">FR</button>
+</div>
+</header>
+
+<section>
+<div class="card">
+<h2 id="about-h">Über mich</h2>
+<p id="about-t">Ich bin Entwicklerin aus Sfax, Tunesien. Master in KI. Ich suche eine Chance in Deutschland. Ich spreche Arabisch, Französisch, Englisch und lerne Deutsch (B1).</p>
+</div>
+<div class="card">
+<h2>Tech Stack</h2>
+<p>HTML, CSS, JavaScript, React, Python, Machine Learning, Git, GitHub</p>
+</div>
+<div class="card">
+<h2 id="contact-h">Kontakt</h2>
+<p>Email: zawamamal8@gmail.com<br>GitHub: github.com/AMA-ZM/AMAL<br>Standort: Sfax, Tunesien</p>
+</div>
+</section>
+
+<script>
+const texts={
+de:{name:"Amal Zawam",title:"Frontend Entwicklerin | Master KI",aboutH:"Über mich",aboutT:"Ich bin Entwicklerin aus Sfax, Tunesien. Master in KI. Ich suche eine Chance in Deutschland. Ich spreche Arabisch, Französisch, Englisch und lerne Deutsch (B1).",contactH:"Kontakt"},
+en:{name:"Amal Zawam",title:"Frontend Developer | Master AI",aboutH:"About me",aboutT:"I am a developer from Sfax, Tunisia. Master in AI. Looking for an opportunity in Germany. I speak Arabic, French, English and I'm learning German (B1).",contactH:"Contact"},
+fr:{name:"Amal Zawam",title:"Développeuse Front-End | Master IA",aboutH:"À propos",aboutT:"Je suis développeuse de Sfax, Tunisie. Master en IA. Je cherche une opportunité en Allemagne. Je parle Arabe, Français, Anglais et j'apprends l'Allemand (B1).",contactH:"Contact"}
+}
+function setLang(l){
+document.getElementById('name').innerText=texts[l].name;
+document.getElementById('title').innerText=texts[l].title;
+document.getElementById('about-h').innerText=texts[l].aboutH;
+document.getElementById('about-t').innerText=texts[l].aboutT;
+document.getElementById('contact-h').innerText=texts[l].contactH;
+document.querySelectorAll('.btn').forEach(b=>b.classList.remove('active'));
+event.target.classList.add('active');
+}
+</script>
+</body>
+</html>
