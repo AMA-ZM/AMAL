@@ -3,58 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amal Zawam - Entwicklerin</title>
+<title>Amal Zawam | Entwicklerin</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-body{font-family:Arial,sans-serif;margin:0;background:#f6f6f8;color:#222}
-header{padding:60px 20px;text-align:center;background:#111;color:white}
-header h1{margin:0;font-size:42px}
-.btn{padding:10px 16px;border:1px solid #111;border-radius:20px;margin:5px;cursor:pointer;background:white}
-.btn.active{background:#111;color:white}
-section{max-width:800px;margin:40px auto;padding:0 20px}
-.card{background:white;padding:20px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,0.05);margin-bottom:20px}
-h2{border-left:4px solid #111;padding-left:10px}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+body{background:#fafafb;color:#111}
+header{background:#0f0f10;color:white;padding:80px 20px 60px;text-align:center}
+header h1{font-size:48px;font-weight:800;letter-spacing:-2px}
+header p{opacity:0.7;margin:10px 0 20px;font-size:18px}
+.lang{display:flex;gap:8px;justify-content:center;margin-top:20px}
+.lang button{border:1px solid #333;background:transparent;color:white;padding:6px 14px;border-radius:20px;cursor:pointer}
+.lang button.active{background:white;color:black}
+.container{max-width:850px;margin:-30px auto 60px;padding:0 20px}
+.card{background:white;border-radius:16px;padding:28px;margin-bottom:20px;box-shadow:0 8px 30px rgba(0,0,0,0.06)}
+.card h2{font-size:18px;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.card h2:before{content:'';width:4px;height:18px;background:#111;border-radius:2px;display:inline-block}
+.badge{display:inline-block;background:#f0f0f2;padding:6px 12px;border-radius:20px;margin:5px;font-size:13px}
+a{color:#111;text-decoration:none;font-weight:600}
+.btn-main{display:inline-block;background:#111;color:white;padding:12px 22px;border-radius:30px;margin-top:15px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+@media(max-width:600px){.grid{grid-template-columns:1fr} header h1{font-size:32px}}
 </style>
 </head>
 <body>
 <header>
-<h1 id="name">Amal Zawam</h1>
-<p id="title">Frontend Entwicklerin | Master KI</p>
-<div>
-<button class="btn active" onclick="setLang('de')">DE</button>
-<button class="btn" onclick="setLang('en')">EN</button>
-<button class="btn" onclick="setLang('fr')">FR</button>
+<h1>Amal Zawam</h1>
+<p id="subtitle">Frontend Entwicklerin | Master KI | Sfax, Tunesien</p>
+<div class="lang">
+<button class="active" onclick="setLang('de')">DE</button>
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('fr')">FR</button>
 </div>
 </header>
 
-<section>
+<div class="container">
 <div class="card">
-<h2 id="about-h">Über mich</h2>
-<p id="about-t">Ich bin Entwicklerin aus Sfax, Tunesien. Master in KI. Ich suche eine Chance in Deutschland. Ich spreche Arabisch, Französisch, Englisch und lerne Deutsch (B1).</p>
+<h2 id="t1">Über mich</h2>
+<p id="d1">Ich bin Entwicklerin aus Sfax, Tunesien. Master in Künstlicher Intelligenz. Ich suche eine Chance in Deutschland als Frontend / KI Entwicklerin. Ich spreche Arabisch, Französisch, Englisch und lerne Deutsch (B1). Motiviert, lernbereit und bereit für neue Herausforderungen.</p>
 </div>
+
+<div class="grid">
 <div class="card">
 <h2>Tech Stack</h2>
-<p>HTML, CSS, JavaScript, React, Python, Machine Learning, Git, GitHub</p>
+<span class="badge">HTML</span>
+<span class="badge">CSS</span>
+<span class="badge">JavaScript</span>
+<span class="badge">React</span>
+<span class="badge">Python</span>
+<span class="badge">Machine Learning</span>
+<span class="badge">Git / GitHub</span>
 </div>
+
 <div class="card">
-<h2 id="contact-h">Kontakt</h2>
-<p>Email: zawamamal8@gmail.com<br>GitHub: github.com/AMA-ZM/AMAL<br>Standort: Sfax, Tunesien</p>
+<h2>Kontakt</h2>
+<p>📧 zawamamal8@gmail.com<br>
+🐙 github.com/AMA-ZM/AMAL<br>
+📍 Sfax, Tunesien - offen für Deutschland<br></p>
+<a class="btn-main" href="mailto:zawamamal8@gmail.com">Kontaktieren</a>
 </div>
-</section>
+</div>
+
+<div class="card">
+<h2>Projekte</h2>
+<p><b>1. Portfolio Website</b> - Diese Seite. Deployed mit GitHub Pages.<br>
+<b>2. KI Projekt (kommt bald)</b> - Chatbot / Bilderkennung mit Python</p>
+</div>
+</div>
 
 <script>
-const texts={
-de:{name:"Amal Zawam",title:"Frontend Entwicklerin | Master KI",aboutH:"Über mich",aboutT:"Ich bin Entwicklerin aus Sfax, Tunesien. Master in KI. Ich suche eine Chance in Deutschland. Ich spreche Arabisch, Französisch, Englisch und lerne Deutsch (B1).",contactH:"Kontakt"},
-en:{name:"Amal Zawam",title:"Frontend Developer | Master AI",aboutH:"About me",aboutT:"I am a developer from Sfax, Tunisia. Master in AI. Looking for an opportunity in Germany. I speak Arabic, French, English and I'm learning German (B1).",contactH:"Contact"},
-fr:{name:"Amal Zawam",title:"Développeuse Front-End | Master IA",aboutH:"À propos",aboutT:"Je suis développeuse de Sfax, Tunisie. Master en IA. Je cherche une opportunité en Allemagne. Je parle Arabe, Français, Anglais et j'apprends l'Allemand (B1).",contactH:"Contact"}
+const txt={
+de:{sub:"Frontend Entwicklerin | Master KI | Sfax, Tunesien",t1:"Über mich",d1:"Ich bin Entwicklerin aus Sfax, Tunesien. Master in Künstlicher Intelligenz. Ich suche eine Chance in Deutschland als Frontend / KI Entwicklerin. Ich spreche Arabisch, Französisch, Englisch und lerne Deutsch (B1). Motiviert, lernbereit und bereit für neue Herausforderungen."},
+en:{sub:"Frontend Developer | AI Master | Sfax, Tunisia",t1:"About me",d1:"I'm a developer from Sfax, Tunisia. Master's in AI. Looking for an opportunity in Germany as Frontend / AI Developer. I speak Arabic, French, English and learning German (B1). Motivated and ready for new challenges."},
+fr:{sub:"Développeuse Frontend | Master IA | Sfax, Tunisie",t1:"À propos",d1:"Je suis développeuse à Sfax, Tunisie. Master en IA. Je cherche une opportunité en Allemagne. Je parle Arabe, Français, Anglais et j'apprends l'Allemand (B1). Motivée et prête pour de nouveaux défis."}
 }
 function setLang(l){
-document.getElementById('name').innerText=texts[l].name;
-document.getElementById('title').innerText=texts[l].title;
-document.getElementById('about-h').innerText=texts[l].aboutH;
-document.getElementById('about-t').innerText=texts[l].aboutT;
-document.getElementById('contact-h').innerText=texts[l].contactH;
-document.querySelectorAll('.btn').forEach(b=>b.classList.remove('active'));
+document.querySelectorAll('.lang button').forEach(b=>b.classList.remove('active'));
 event.target.classList.add('active');
+document.getElementById('subtitle').innerText=txt[l].sub;
+document.getElementById('t1').innerText=txt[l].t1;
+document.getElementById('d1').innerText=txt[l].d1;
 }
 </script>
 </body>
