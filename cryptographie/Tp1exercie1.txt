@@ -1,0 +1,17 @@
+% Saisie de la chaîne CH
+CH = input('Entrez une chaîne de caractères (uniquement des lettres alphabétiques) : ', 's');
+Res=''
+cr=CH(1)
+count = 1;
+ for i = 2:length(CH)
+        if CH(i) == cr
+            count = count + 1;
+        else
+            Res = [Res, num2str(count), cr];
+            cr = CH(i);
+            count = 1;
+        end
+    end
+    
+    Res = [Res, num2str(count), cr];
+    Res
